@@ -1,0 +1,28 @@
+FustatAI
+Copyright 2025 Waleed Altamimi
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this project except in compliance with the License.
+A copy of the License is included in the project's LICENSE file.
+
+--------------------------------------------------------------------
+
+This project may include or depend on third-party components with separate
+licenses that require attribution. When present, such attributions are
+maintained below.
+
+--------------------------------------------------------------------
+Third-Party Components and Notices
+
+This project includes code derived from:
+- agent-chat-ui by Brace Sproul, used under MIT License
+  Source: https://github.com/langchain-ai/agent-chat-ui
+  Copyright (c) 2025 Brace Sproul
+
+  The original software was licensed under the MIT License.
+  Substantial modifications have been made for integration into this project.
+  
+--------------------------------------------------------------------
+
+If you believe a required attribution is missing, please open an issue at:
+https://github.com/wtamimi/fustatai/issues

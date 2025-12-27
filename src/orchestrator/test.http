@@ -1,0 +1,206 @@
+### Health
+GET http://localhost:8000/ HTTP/1.1
+
+### Get all versions
+GET http://localhost:8000/versions HTTP/1.1
+
+### Get latest version
+GET http://localhost:8000/versions/current HTTP/1.1
+
+
+
+### Create an API Key
+POST http://localhost:8000/api/v1/api-keys/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Ollama Integration Key",
+  "provider_name": "Ollama",
+  "model_name": "gemma2b:latest",
+  "base_url": "http://localhost:11434/",
+  "secret_key": "ollama"
+}
+
+### Get all API Keys
+GET http://127.0.0.1:8000/api/v1/api-keys/
+
+### Get API Key by ID
+GET http://127.0.0.1:8000/api/v1/api-keys/0197dc7e-bce3-7774-a94f-64ca2856ffc4
+
+### Update API Key
+PUT http://127.0.0.1:8000/api/v1/api-keys/0197dc7e-bce3-7774-a94f-64ca2856ffc4
+Content-Type: application/json
+
+{
+  "name": "Ollama Api Key",
+  "provider_name": "Ollama",
+  "model_name": "gemma2:3b",
+  "secret_key": "newsecret"
+}
+
+### Delete API Key
+DELETE http://127.0.0.1:8000/api/v1/api-keys/0197dc7e-bce3-7774-a94f-64ca2856ffc4
+
+
+### Create McpServer
+POST http://localhost:8000/api/v1/mcp-servers
+Content-Type: application/json
+
+{
+  "name": "File System",
+  "description": "File server for MCP services",
+  "config_json": {
+      "command": "/usr/bin/npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/wtamimi/fileserver"]  
+      }
+}
+
+### Get all McpServers
+GET http://localhost:8000/api/v1/mcp-servers/
+
+### Get single McpServer
+GET http://localhost:8000/api/v1/mcp-servers/0197dc9b-562a-75c3-892a-55e27902866e
+
+### Get single McpServer Tools
+GET http://localhost:8000/api/v1/mcp-servers/0197dc9b-562a-75c3-892a-55e27902866e/tools
+
+### Update McpServer
+PUT http://localhost:8000/api/v1/mcp-servers/0197dc98-5f0f-76ee-b8ba-69cd81d3d571
+Content-Type: application/json
+
+{
+  "name": "Updated File System",
+  "config_json": {
+    "url": "https://mcp-updated.example.com",
+    "api_key": "new_secret",
+    "timeout": 60
+  }
+}
+
+### Delete McpServer
+DELETE http://localhost:8000/api/v1/mcp-servers/0197dc98-5f0f-76ee-b8ba-69cd81d3d571
+
+
+
+### Get all API Keys
+GET http://127.0.0.1:8000/api/v1/api-keys/
+
+### Get all McpServers
+GET http://localhost:8000/api/v1/mcp-servers/
+
+### Create Agent
+POST http://localhost:8000/api/v1/agents/
+Content-Type: application/json
+
+{
+  "name": "Test 911",
+  "description": "Processes incoming data streams",
+  "role": "You are a data engineer",
+  "instructions": "Analyze data and generate reports",
+  "api_key_id": "0197dd51-a5da-751e-8662-7d3934e79f38",
+  "mcp_servers": [
+    { "mcp_server_id": "0197dc97-4323-7124-ad22-cdf8e386e659"},
+    { "mcp_server_id": "0197dc97-4324-7679-a86d-9824fa27e965"}
+  ]
+}
+
+### Generate Agent
+POST http://localhost:8000/api/v1/agents/ai-generate
+Content-Type: application/json
+
+{
+  "user_prompt": "An IT Assistant that helps users troubleshoot issues"
+}
+
+### Get all Agents
+GET http://localhost:8000/api/v1/agents/
+
+### Get single Agent
+GET http://localhost:8000/api/v1/agents/0197f08e-e635-70f8-9ca6-3b209354457c
+
+### Update Agent (change servers)
+PUT http://localhost:8000/api/v1/agents/0197effc-cb5c-71ee-8d63-e070841ec905
+Content-Type: application/json
+
+{
+  "name": "Test Update 911",
+  "description": "Processes incoming data streams",
+  "role": "You are a data engineer",
+  "instructions": "Analyze data and generate reports",
+  "api_key_id": "0197dd51-a5da-751e-8662-7d3934e79f38",
+  "mcp_servers": [
+    { "mcp_server_id": "0197dc97-4324-7679-a86d-9824fa27e965"}
+  ]
+}
+
+### Delete Agent
+DELETE http://localhost:8000/api/v1/agents/0197effc-cb5c-71ee-8d63-e070841ec905
+
+### Verify API Key still exists
+GET http://localhost:8000/api/v1/api-keys/0197dd51-a5da-751e-8662-7d3934e79f38
+
+### Verify McpServers still exist
+GET http://localhost:8000/api/v1/mcp-servers/0197dc97-4324-7679-a86d-9824fa27e965
+
+
+
+### Get single Agent
+GET http://localhost:8000/api/v1/agents/01980a25-7365-760a-b851-ff4933498c14
+
+### Get all API Keys
+GET http://127.0.0.1:8000/api/v1/api-keys/
+
+### Get all Agents
+GET http://localhost:8000/api/v1/agents/
+
+### Create Orchestrator
+POST http://localhost:8000/api/v1/orchestrators
+Content-Type: application/json
+
+{
+  "name": "Test Orchestrator 2",
+  "description": "Coordinates data collection and analysis",
+  "instructions": "Manage workflow between agents",
+  "api_key_id": "0197dd50-5579-7d25-b081-2259836a3cd3",
+  "agents": [
+    {"agent_id": "01980a25-7365-760a-b851-ff4933498c14"},
+    {"agent_id": "0197f08e-e635-70f8-9ca6-3b209354457c"}
+  ]
+}
+
+### Get all Orchestrators
+GET http://localhost:8000/api/v1/orchestrators
+
+### Get all Apps
+GET http://localhost:8000/api/v1/apps
+
+### Get all Agent Apps
+GET http://localhost:8000/api/v1/apps/agents
+
+### Get single Orchestrator
+GET http://localhost:8000/api/v1/orchestrators/01982255-d85c-7170-924a-e20894ed7e00
+
+### Update Orchestrator
+PUT http://localhost:8000/api/v1/orchestrators/01982255-d85c-7170-924a-e20894ed7e00
+Content-Type: application/json
+
+{
+  "name": "Test 1",
+  "description": "Test 1",
+  "instructions": "Test 1",
+  "api_key_id": "0197dd50-5579-7d25-b081-2259836a3cd3",
+  "agents": [
+    {"agent_id": "01980a25-7365-760a-b851-ff4933498c14"}
+  ]
+}
+
+### Delete Orchestrator
+DELETE http://localhost:8000/api/v1/orchestrators/01981fa5-5b09-73ab-b0c9-3a3860b0b3fe
+
+### Verify Agents still exist
+GET http://localhost:8000/api/v1/agents/01980a25-7365-760a-b851-ff4933498c14
+
+### Verify API Key still exists
+GET http://localhost:8000/api/v1/api-keys/0197dd50-5579-7d25-b081-2259836a3cd3
+
+

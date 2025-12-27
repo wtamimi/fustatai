@@ -1,0 +1,27 @@
+[project]
+name = "Fustat-Orchestrator"
+version = "0.1.0"
+description = "FustatAI - Orchestration Service"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "alembic>=1.16.4",
+    "asyncpg>=0.30.0",
+    "fastapi>=0.116.1",
+    "langchain>=0.3.27",
+    "langchain-anthropic>=0.3.19",
+    "langchain-google-genai>=2.1.9",
+    "langchain-groq>=0.3.7",
+    "langchain-mcp-adapters>=0.1.9",
+    "langchain-ollama>=0.3.6",
+    "langchain-openai>=0.3.30",
+    "langgraph>=0.6.6",
+    "langgraph-checkpoint-sqlite>=2.0.11",
+    "langgraph-supervisor>=0.0.29",
+    "langsmith>=0.4.27",
+    "psycopg2-binary>=2.9.10",
+    "python-dotenv>=1.1.1",
+    "uuid6>=2025.0.1",
+    "uvicorn>=0.35.0",
+]
