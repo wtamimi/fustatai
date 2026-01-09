@@ -4,9 +4,9 @@ To help you get started with FustatAI, we'll cover a few important topics:
 
 - Installing FustatAI
 
-    - Prerequisites: [Environment Guide](./installation/PREREQUISITES.md)
+    - Prerequisites: [Environment Guide](./install/PREREQUISITES.md)
 
-    - Local Development Setup: [FustatAI Setup Guide](./installation/SETUP.md)
+    - Local Development Setup: [FustatAI Setup Guide](./install/SETUP.md)
 
 - First steps after installation
 
