@@ -13,7 +13,10 @@ FustatAI is an open-source journey into learning, understanding, and experimenti
 
 FustatAI is a sandbox environment for curiosity — to explore how AI agents and orchestration work, and how humans and LLMs can collaborate through reasoning, workflows, and tools.
 
-## FustatAI Modules
+> [!NOTE]
+> 🎥 Watch our [YouTube Channel](https://www.youtube.com/@fustatai-eg).
+
+## Features
 
 ![FustatAI Architecture Diagram](./docs/assets/overview.png)
 
@@ -68,32 +71,7 @@ LLM / Agent Integrations
 
 ## Getting Started
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/wtamimi/fustatai.git
-cd fustatai
-```
-
-## 2. Repo Structure and Setup Instructions
-
-Each module contains its own README with setup instructions.
-
-```bash
-src/
-  hub/           # Agent Hub (Next.js)
-    README.md    # Agent Hub setup instructions
-  studio/        # Agent Studio (Next.js)
-    README.md    # Agent Studio setup instructions
-  orchestrator/  # Orchestration Service (FastAPI + LangGraph)
-    README.md    # Orchestration Service setup instructions
-```
-
-### 3. Recommended run order
-
-1. Orchestration Service — uvicorn
-2. Agent Studio — npm
-3. Agent Hub — npm
+Follow our getting started guide [here](/docs/README.md).
 
 ## Fun Facts
 
