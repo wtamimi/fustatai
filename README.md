@@ -16,6 +16,10 @@ FustatAI is a sandbox environment for curiosity — to explore how AI agents and
 > [!NOTE]
 > 🎥 Watch our [YouTube Channel](https://www.youtube.com/@fustatai-eg).
 
+## Getting Started
+
+Follow our getting started guide [here](./docs/README.md).
+
 ## Features
 
 ![FustatAI Architecture Diagram](./docs/assets/overview.png)
@@ -68,10 +72,6 @@ LLM / Agent Integrations
 - LLM‑agnostic (supports API models + local models)
 - MCP (Model Context Protocol) support
 - Orchestrator / Supervisor Multi-Agent Pattern 
-
-## Getting Started
-
-Follow our getting started guide [here](/docs/README.md).
 
 ## Fun Facts
 

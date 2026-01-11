@@ -10,7 +10,7 @@ To help you get started with FustatAI, we'll cover a few important topics:
 
 - First steps after installation
 
-    - Watch our videos at: [FustatAI Builders Playlist](https://youtube.com/playlist?list=PLwHUfyn3p0n6hNB_1oBeWqo7HzhDlq07L&si=LBzJeybQXO41orCm)
+    - Watch our Builder tutorials and Developer series at our [YouTube Channel](https://www.youtube.com/@fustatai-eg)
 
 - An overview of FustatAI features
 
@@ -20,6 +20,8 @@ To help you get started with FustatAI, we'll cover a few important topics:
 
     - Create an issue [Here](https://github.com/wtamimi/fustatai/issues/new)
 
-    - Leave us a comment at our [YouTube Channel](https://www.youtube.com/@fustatai-eg)
+    - Ask questions or share ideas [Here](https://github.com/wtamimi/fustatai/discussions)
+
+    - Add comments at our [YouTube Channel](https://www.youtube.com/@fustatai-eg)
 
     - Send me a message at [LinkedIn](https://www.linkedin.com/in/wtamimi/)

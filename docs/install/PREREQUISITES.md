@@ -31,21 +31,11 @@ Reboot when prompted.
 wsl --install -d Ubuntu-24.04
 ```
 
-### 1.3 Verify Installation
-
-```powershell
-wsl -l -v
-```
-
-Ensure Ubuntu is running on WSL 2.
-
-### 1.4 Initialize Ubuntu (REQUIRED FIRST STEP)
-
-Open Ubuntu 24.04 from the Start menu.
-
 > ⚠️ IMPORTANT: You'll be prompted to create a UNIX username and password. This is separate from your Windows credentials.
 
-Immediately after setting up your user, run:
+### 1.3 Initialize Ubuntu (REQUIRED FIRST STEP)
+
+Open Ubuntu 24.04 from the Start menu, then run:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -57,7 +47,6 @@ sudo apt update && sudo apt upgrade -y
 
 ```bash
 sudo apt install build-essential libssl-dev libffi-dev pkg-config -y
-sudo apt install software-properties-common -y
 ```
 
 ---
@@ -109,7 +98,7 @@ python3.13 --version
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Restart terminal, then verify:
+> ⚠️ IMPORTANT: Restart terminal, then verify:
 
 ```bash
 uv --version
@@ -117,9 +106,16 @@ uv --version
 
 ### 2.4 PostgreSQL 16+
 
+Install the packages:
+
 ```bash
 # Install PostgreSQL
 sudo apt install postgresql-16 postgresql-client-16 libpq-dev -y
+```
+
+Start the service:
+
+```bash
 sudo service postgresql start
 ```
 
@@ -134,7 +130,11 @@ Configure PostgreSQL user account:
 ```bash
 # After starting PostgreSQL (Use a stronger password)
 sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'postgres';"
+```
 
+(Optional) Create a test database:
+
+```bash
 # Create a database with your username for personal testing (optional)
 echo "Creating personal database '$(whoami)' for development testing"
 sudo -u postgres createdb $(whoami) 2>/dev/null || true

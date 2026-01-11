@@ -17,7 +17,7 @@ Follow our [guide here](PREREQUISITES.md) for setting up a new Windows WSL distr
 - `uv` installed
 - Nodejs v22+
 - PostgreSQL 16+
-- VS Code [download VS Code](https://code.visualstudio.com/) or Cursor [download Cursor](https://cursor.com/)
+- VS Code [download VS Code](https://code.visualstudio.com/) or use your favorite code editor
 
 ---
 
@@ -25,7 +25,6 @@ Follow our [guide here](PREREQUISITES.md) for setting up a new Windows WSL distr
 
 ```bash
 git clone https://github.com/wtamimi/fustatai.git
-cd fustatai
 ```
 
 ### 2.1 Repo Structure
@@ -34,7 +33,7 @@ cd fustatai
 src/
 ├── orchestrator/   # Backend – API & agents runtime
 ├── studio/         # Agent Studio – AI builders
-└── hub/            # Agent Hub – interaction workspace
+└── hub/            # Agent Hub – users workspace
 ```
 
 Each folder is opened as a standalone project in VS Code.
